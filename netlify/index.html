@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Starting file heading</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <!-- Jquery -->
+  <script src="./js/jquery.js"></script>
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- Lighbox CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <!-- Landing page -->
+  <main class="main">
+    <div class="main__text">
+      <img src="./assets/studioAcimaLogo.webp" alt="" class="main__logo" />
+      <div class="main__heading-btn">
+        <h1 class="main__text-heading">
+          Studio <br />
+          Acima
+        </h1>
+        <a href="" class="btn main__projects-btn">Projekti
+          <svg class="btn-chevron">
+            <use xlink:href="./assets/spirite.svg#icon-chevron-thin-right"></use>
+          </svg></a>
+      </div>
+
+      <div class="main__contact-icons">
+        <div class="main__contact-icons-insta">
+          <a href="" class="instagram"><svg class="main__contact-icon main__contact-instagram">
+              <use xlink:href="./assets/spirite.svg#icon-instagram"></use>
+            </svg></a>
+        </div>
+        <div class="main__contact-icons-phone">
+          <a href="" class="phone"><svg class="main__contact-icon main__contact-phone">
+              <use xlink:href="./assets/spirite.svg#icon-phone_iphone"></use>
+            </svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="main__carousel">
+      <div class="swiper mySwiper main__carousel-content">
+        <div class="swiper-wrapper main__carousel-wrapper">
+          <div class="swiper-slide main__carousel-slide" style="background-image: url('./assets/img3.webp')"></div>
+          <div class="swiper-slide main__carousel-slide" style="background-image: url('./assets/img1.webp')"></div>
+          <div class="swiper-slide main__carousel-slide" style="background-image: url('./assets/img3.webp')"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- About section -->
+  <section class="about container">
+    <img src="./assets/modernInterior.webp" class="about__img" alt="" />
+
+    <div class="about__info">
+      <!-- About studio -->
+      <h2>Studio</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+        libero aliquid obcaecati expedita accusantium odio, quibusdam ullam
+        ipsum enim pariatur sapiente ab harum adipisci ratione officia facere
+        minima voluptas nam!
+      </p>
+      <!-- what we do -->
+      <div class="about__info-work">
+        <h4>Pretvorite vaše ideje u realnost</h4>
+
+        <div class="about__info-lists">
+          <ul class="about__info-list about__info-list--1">
+            <li>
+              <svg ">
+                  <use
+                    xlink:href=" ./assets/spirite.svg#icon-checkbox-checked"></use></svg>Dizajn enterijera
+            </li>
+            <li><svg ">
+                <use
+                  xlink:href=" ./assets/spirite.svg#icon-checkbox-checked"></use></svg>Projektovanje</li>
+            <li><svg ">
+                <use
+                  xlink:href=" ./assets/spirite.svg#icon-checkbox-checked"></use></svg>Nadzor</li>
+          </ul>
+          <ul class="about__info-list about__info-list--2">
+            <li><svg ">
+                <use
+                  xlink:href=" ./assets/spirite.svg#icon-checkbox-checked"></use></svg>Idejna rjesenja</li>
+            <li><svg ">
+                <use
+                  xlink:href=" ./assets/spirite.svg#icon-checkbox-checked"></use></svg>Web dizajn</li>
+            <li><svg ">
+                <use
+                  xlink:href=" ./assets/spirite.svg#icon-checkbox-checked"></use></svg>3D renderovanje</li>
+          </ul>
+        </div>
+        <div class="about__contact-btn">
+          <a href="" class="btn "> <svg " class=" btn-chevron">
+              <use xlink:href="./assets/spirite.svg#icon-chevron-thin-right"></use>
+            </svg> Kontakt</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+
+  <section class="projects container">
+    <h2>Projekti</h2>
+    <div class="swiper projects__slider">
+      <div class="swiper-wrapper projects__slider-wrapper">
+        <div class="swiper-slide projects__slide">
+          <div class="projects__info" data-num="01">
+            <h4 class="projects__title">
+              Naslov projekta
+            </h4>
+            <p class="projects__desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, ducimus
+              sapiente fuga, repellendus labore omnis in pariatur ex officiis, at ea consequatur? Laboriosam
+              necessitatibus ratione deserunt dolorem esse soluta? Obcaecati?</p>
+          </div>
+          <div class="projects__gallery">
+            <a href="./assets/img1.webp" data-lightbox="P1" data-title="Projekat 1">
+              <img src="./assets/img1.webp" alt="Projekat slika" class="projects__img">
+            </a>
+          </div>
+        </div>
+        <div class="swiper-slide projects__slide">
+          <div class="projects__info" data-num="02">
+            <h4 class="projects__title">
+              Naslov projekta
+            </h4>
+            <p class="projects__desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, ducimus
+              sapiente fuga, repellendus labore omnis in pariatur ex officiis, at ea consequatur? Laboriosam
+              necessitatibus ratione deserunt dolorem esse soluta? Obcaecati?</p>
+          </div>
+          <div class="projects__gallery">
+            <a href="./assets/img3.webp" data-lightbox="P1" data-title="Projekat 1">
+              <img src="./assets/img3.webp" alt="Projekat slika" class="projects__img">
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="swiper-button-next projects__control-btn projects__control-btn--next"></div>
+    <div class="swiper-button-prev projects__control-btn projects__control-btn--prev"></div>
+    <div class="swiper-pagination projects__pagination"></div>
+  </section>
+
+  <!-- Swiper -->
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"
+  integrity="sha256-4sETKhh3aSyi6NRiA+qunPaTawqSMDQca/xLWu27Hg4="
+  crossorigin="anonymous"
+></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <!-- Lightbox -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js "></script>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

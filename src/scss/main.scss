@@ -1,0 +1,156 @@
+@import './vars.scss';
+
+//Main section
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+
+  @media (max-width: $max576px) {
+    height: auto;
+  }
+
+  @media (max-width: $max1200px) {
+    flex-direction: column;
+  }
+
+  //Text side
+  &__text {
+    width: 40vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+    color: $white;
+    padding: 70px 0;
+
+    @media (max-width: $max1200px) {
+      width: 100%;
+      height: 50vh;
+    }
+
+    @media (max-width: $max576px) {
+      padding: 30px 0;
+      justify-content: space-between;
+      max-height: 450px;
+    }
+
+    @media (max-width: $max375px) {
+      min-height: 450px;
+    }
+  }
+
+  //Logo
+  &__logo {
+    width: 230px;
+
+    @media (max-width: $max576px) {
+      width: 180px;
+      top: 30px;
+    }
+
+    @media (max-width: $max375px) {
+      width: 160px;
+    }
+  }
+
+  //Main page heading and button div
+  &__heading-btn {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  //Projects btn with chevron inside
+  &__projects-btn {
+    margin-top: 40px;
+
+    @media (max-width: $max576px) {
+      padding: 15px 60px 15px 30px;
+      margin-top: 30px;
+    }
+  }
+
+  //Instagram and phone icons
+  &__contact-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+
+    @media (max-width: $max576px) {
+      bottom: 30px;
+      width: 90px;
+    }
+  }
+
+  &__contact-icon {
+    fill: $white;
+    width: 40px;
+    height: 40px;
+    transition: 0.3s ease;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    @media (max-width: $max576px) {
+      width: 30px;
+      height: 30px;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        fill: $gold;
+      }
+    }
+  }
+
+  //Carousel
+  &__carousel {
+    background-color: $lighterBlack;
+    width: 70vw;
+    height: 50vh;
+
+    @media (max-width: $max1200px) {
+      width: 100%;
+      height: 50vh;
+    }
+
+    @media (max-width: $max576px) {
+      min-height: 420px;
+      max-height: 420px;
+    }
+
+    @media (max-width: $max375px) {
+      max-height: 200px;
+    }
+  }
+
+  &__carousel-content {
+    height: 100vh;
+
+    @media (max-width: $max1200px) {
+      height: 100%;
+    }
+  }
+
+  &__carousel-slide {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+//Chevron animation
+@keyframes chevronAnimation {
+  from {
+    right: 21px;
+  }
+
+  to {
+    right: 18px;
+  }
+}

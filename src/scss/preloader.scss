@@ -1,0 +1,88 @@
+:root {
+  --size: 20px;
+  --dimension: 250px;
+  --bg-color: #070f0f;
+  --color: #ffc94b;
+  @media (max-width: 1200px) {
+    --size: 15px;
+    --dimension: 200px;
+  }
+  @media (max-width: 576px) {
+    --size: 12px;
+    --dimension: 150px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-preloader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-color);
+  width: 100%;
+  height: 100vh;
+  animation: color 9s linear infinite;
+  z-index: 99999;
+}
+
+.circle {
+  position: relative;
+  width: var(--dimension);
+  height: var(--dimension);
+  margin: 0 calc(var(--size) / -2);
+}
+
+.circle span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(calc(360deg / 20 * var(--i)));
+}
+
+.circle span::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: calc(50% - calc(var(--size) / 2));
+  background: var(--color);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  box-shadow: 0 0 5px var(--color), 0 0 5px var(--color), 0 0 40px var(--color),
+    0 0 30px var(--color), 0 0 40px var(--color), 0 0 50px var(--color);
+  transform: scale(0.1);
+  animation: spin 4s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+.circle:nth-child(2) {
+  transform: rotate(-198deg);
+}
+
+.circle:nth-child(2) span::before {
+  animation-delay: calc(-0.1s * var(--i));
+}
+
+@keyframes spin {
+  0% {
+    transform: scale(1);
+  }
+
+  50%,
+  100% {
+    transform: scale(0.1);
+  }
+}

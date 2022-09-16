@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.scss","style.css"],"names":[],"mappings":"AAKA,QACE,gBANF,AAGE,WAAA,CCCD","file":"style.css","sourcesContent":["$color: yellow;\r\n\r\n@mixin naslov {\r\n  color: green;\r\n}\r\n.naslov {\r\n  background: $color;\r\n  @include naslov;\r\n}\r\n","\n.naslov {\n  background: yellow;\n  color: green;\n}"]}

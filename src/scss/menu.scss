@@ -1,0 +1,94 @@
+@import './vars.scss';
+
+//Menu with nav links
+.menu {
+  position: fixed;
+  top: 50%;
+  left: -260px;
+  transition: 0.3s ease;
+  transform: translateY(-50%);
+  background-color: $white;
+  z-index: 11;
+  padding: 50px 81px;
+  max-width: 260px;
+  border-radius: 0 4px 4px 0;
+
+  &__list {
+    list-style: none;
+  }
+  &__list-item {
+    margin-top: 50px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $lighterBlack;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 18px;
+    position: relative;
+    &::before {
+      content: '';
+      transition: 0.3s ease;
+      position: absolute;
+      left: -15px;
+      top: 0;
+      height: 0;
+      width: 3px;
+      background: $gold;
+    }
+    @media (hover: hover) {
+      &:hover {
+        &::before {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  //Menu toggler positioned absolute to toggle open/close menu
+  &__toggler {
+    background-color: $gold;
+    width: 30px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    border-radius: 0 4px 4px 0;
+    transform: translateY(-50%);
+    z-index: -100000000 !important;
+    cursor: pointer;
+    @media (max-width: $max576px) {
+      width: 25px;
+      right: -25px;
+    }
+    &:hover {
+      svg {
+        fill: $lighterBlack;
+      }
+    }
+  }
+  svg {
+    transition: 0.3s ease;
+    width: 100%;
+    height: 100%;
+    fill: $white;
+    z-index: -10;
+  }
+  .menu-chevron-close {
+    transform: rotateY(180deg);
+  }
+}
+
+//Classes for javascript
+//Open nav menu
+.menu-open {
+  left: 0;
+}
+//Close nav menu
+.menu-closed {
+  left: -260px;
+}

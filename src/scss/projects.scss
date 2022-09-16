@@ -1,0 +1,167 @@
+@import './vars.scss';
+
+//Projects
+.projects {
+  text-align: center;
+  padding-bottom: 140px;
+  position: relative;
+
+  //Projects slider
+  &__slider {
+    height: 600px;
+    max-height: 600px;
+    border-radius: 4px;
+
+    @media (max-width: $max1200px) {
+      height: 850px;
+      max-height: 850px;
+    }
+
+    @media (max-width: $max576px) {
+      height: 700px;
+      max-height: 700px;
+    }
+  }
+  //Slide with text and img section
+  &__slide {
+    display: flex;
+    background: $white;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+
+    @media (max-width: $max1200px) {
+      flex-direction: column;
+    }
+  }
+  //Text section on slide
+  &__info {
+    min-width: 30% !important;
+    max-width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    position: relative;
+    background-color: $white;
+
+    @media (max-width: $max1200px) {
+      min-width: 100% !important;
+      max-width: 30%;
+    }
+
+    //Background light num behind text
+    &::before {
+      content: attr(data-num);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 200px;
+      letter-spacing: 5px;
+      z-index: 1;
+      color: $transparentNum;
+    }
+
+    h4 {
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      z-index: 10 !important;
+      color: $darkerBlack;
+    }
+
+    p {
+      z-index: 10 !important;
+      color: $darkerBlack;
+      font-weight: 500;
+    }
+  }
+
+  //Gallery section on slide
+  &__gallery {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  //Prev and next button
+
+  &__pagination {
+    width: 100%;
+    border-radius: 4px;
+    margin-top: 50px;
+    max-width: 1380px;
+
+    @media (max-width: $max576px) {
+      padding: 25px 25px;
+    }
+  }
+  //General style for prev and next btn
+  &__control-btn {
+    background-color: $gold;
+    padding: 30px 30px;
+    border-radius: 4px;
+
+    &::after {
+      color: $white;
+
+      @media (max-width: $max576px) {
+        font-size: 30px !important;
+      }
+    }
+
+    &:focus,
+    &:active {
+      outline: none !important;
+      border: none !important;
+    }
+
+    //Previous btn
+    &--prev {
+      left: 85% !important;
+
+      @media (max-width: $max1200px) {
+        left: 78% !important;
+      }
+
+      @media (max-width: $max767px) {
+        left: 70% !important;
+      }
+
+      @media (max-width: $max576px) {
+        left: 0 !important;
+      }
+    }
+
+    //Next btn
+    &--next {
+      right: 0 !important;
+    }
+  }
+}
+
+//Pagination
+.swiper-pagination {
+  position: absolute;
+  top: 90%;
+  height: fit-content;
+  width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $gold;
+  font-size: 18px;
+
+  @media (max-width: $max1200px) {
+    top: 93%;
+  }
+
+  @media (max-width: $max576px) {
+    top: 50%;
+  }
+}
